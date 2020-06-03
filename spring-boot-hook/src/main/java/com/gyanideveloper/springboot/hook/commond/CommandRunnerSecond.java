@@ -9,13 +9,13 @@ import org.springframework.core.Ordered;
 import org.springframework.stereotype.Component;
 
 @Component
-public class CommandRunnerSecound implements CommandLineRunner, Ordered {
+public class CommandRunnerSecond implements CommandLineRunner, Ordered {
 
-	private static final Logger logger = LoggerFactory.getLogger(CommandRunnerSecound.class);
+	private static final Logger logger = LoggerFactory.getLogger(CommandRunnerSecond.class);
 
 	@Override
 	public void run(String... args) throws Exception {
-		logger.info("Application started with CommandRunnerSecound::run(-) ::" + Arrays.toString(args));
+		logger.info("Application started with CommandRunnerSecond::run(-) ::" + Arrays.toString(args));
 	}
 
 	@Override
