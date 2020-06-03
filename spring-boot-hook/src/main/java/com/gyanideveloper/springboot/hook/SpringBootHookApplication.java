@@ -4,6 +4,7 @@ import java.util.Arrays;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -18,6 +19,14 @@ public class SpringBootHookApplication {
 	public CommandLineRunner getRunner() {
 		return args -> {
 			logger.info("Application started with @Bean CommandLineRunner::run(-) ::" + Arrays.toString(args));
+		};
+	}
+
+	@Bean
+	public ApplicationRunner getApplicationRunner() {
+		return args -> {
+			logger.info("Application started with @Bean ApplicationRunner::run(-) ::"
+					+ Arrays.toString(args.getSourceArgs()));
 		};
 	}
 
